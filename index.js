@@ -14,7 +14,8 @@ const typeDefs = gql`
     type Query {
         ola: String
         user: User,
-        product: Object
+        product: Object,
+        arrayValues: [String]
     }
 `
 
@@ -47,6 +48,10 @@ const resolvers = {
             discount,
             priceFinal: (price - discountCalc)
         }
+    },
+
+    arrayValues() {
+        return [123, 'teste']
     }
  }
 }
