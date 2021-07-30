@@ -1,0 +1,8 @@
+scalar Object
+
+type Query {
+    ola: String
+    user: User,
+    product: Object,
+    arrayUsers(id: Int): [User]
+}
