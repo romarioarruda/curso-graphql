@@ -15,7 +15,7 @@ const typeDefs = gql`
         ola: String
         user: User,
         product: Object,
-        arrayValues: [String]
+        arrayUsers(id: Int): [User]
     }
 `
 
@@ -50,8 +50,27 @@ const resolvers = {
         }
     },
 
-    arrayValues() {
-        return [123, 'teste']
+    arrayUsers(_, { id }) {
+        const users = [
+            {
+                id: 1,
+                name: 'ROmário',
+                last_name: 'Arruda',
+                email: 'email@gmail.com',
+                role: 'Dev'
+            },
+            {
+                id: 2,
+                name: 'Joao',
+                last_name: 'Silva',
+                email: 'jao@gmail.com',
+                role: 'sales'
+            }
+        ]
+
+        const filterUser = users.filter(user => user.id === id)
+
+        return filterUser || []
     }
  }
 }
