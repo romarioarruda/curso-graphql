@@ -10,3 +10,7 @@ https://www.cod3r.com.br/courses/graphql-criando-apis-profissionais-e-flexiveis?
 https://graphql.github.io/learn/schema/
 
 https://graphql.github.io/learn/queries/
+
+**Cap 2 - Mutations**:
+
+https://graphql.org/learn/queries/#mutations
