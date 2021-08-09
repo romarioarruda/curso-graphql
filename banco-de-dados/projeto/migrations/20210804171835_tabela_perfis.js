@@ -1,5 +1,6 @@
 exports.up = async function(knex) {
     const exists = await knex.schema.hasTable('perfis')
+
     if(!exists) {
       const newTable = await knex.schema.createTable('perfis', table => {
         table.increments('id').primary()
